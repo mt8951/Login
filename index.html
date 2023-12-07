@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body {
+            background-color: blueviolet;
+        }
+
+        .container {
+            border: 2px solid white;
+            border-radius: 8px;
+            margin: 50px auto;
+            max-width: 350px;
+            max-height: 300px;
+            background-color: white;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            padding-bottom: 9px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container label {
+            width: 100px;
+            margin: 10px;
+        }
+
+        input {
+            border:1px solid grey ;
+            width: 270px;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .button {
+            position: relative;
+            overflow: hidden;
+            height: 40px;
+            padding: 0 5px;
+            border-radius: 1.5rem;
+            background: #3d3a4e;
+            background-size: 400%;
+            color: #fff;
+            border: none;
+        }
+
+        .button:hover::before {
+            transform: scaleX(1);
+        }
+
+        .button-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            width: 100%;
+            height: inherit;
+            border-radius: inherit;
+            background: linear-gradient(82.3deg,
+                    rgba(150, 93, 233, 1) 10.8%,
+                    rgba(99, 88, 238, 1) 94.3%);
+            transition: all 0.475s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="https://getform.io/f/06608b6c-311e-4508-8048-ffeb0d762065" method="POST">
+            <h2>Login</h2>
+            <hr>
+            <div>
+                <label for="username">username</label>
+            </div>
+            <div>
+                <input type="text" name="username" id="username" placeholder="Type Your Name" required>
+            </div>
+            <div>
+                <label for="password">password</label>
+            </div>
+            <div>
+                <input type="text" name="password" id="password" placeholder="Type Your Password">
+            </div>
+            <button class="button">
+                <span class="button-content">Login</span>
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
